@@ -4,7 +4,7 @@ import PokemonList from './PokemonList.jsx';
 import PokemonPage from './PokemonPage.jsx';
 import ErrorMessage from './ErrorMessage.jsx';
 import LoadingSpinner from './LoadingSpinner.jsx';
-import './styles.css';
+
 
 
 const App = () => (
