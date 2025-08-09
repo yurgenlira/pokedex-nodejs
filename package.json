@@ -7,7 +7,9 @@
     "start": "webpack serve --mode development --open",
     "build": "webpack --mode production",
     "test": "jest",
-    "eslint": "eslint ."
+    "eslint": "eslint .",
+    "test:e2e": "npx cypress run",
+    "cypress:open": "npx cypress open"
   },
   "dependencies": {
     "prop-types": "^15.8.1",

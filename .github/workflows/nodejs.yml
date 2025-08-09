@@ -18,8 +18,14 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm install
+      - run: npm ci
       - name: Lint
         run: npm run eslint
       - run: npm run build --if-present
       - run: npm test
+      - name: E2E test
+        uses: cypress-io/github-action@v6
+        with:
+          command: npm run test:e2e
+          start: npm start
+          wait-on: http://localhost:8080
